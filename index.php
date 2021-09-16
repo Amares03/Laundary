@@ -1,3 +1,10 @@
+<?php
+       $name = $_GET['name'];
+       $age = $_GET['age'];
+
+       
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,19 +13,12 @@
 </head>
 <body>
 
-	<form action="index.php" method="get" name="form">
+	<form action="<?..?>" method="get" name="form">
 		name:<input type="txt" name="name">
 		age:<input type="number" name="age">
 		<input type="submit">
 		
 	</form>
-<?php
-       $name = $_GET['name'];
-       $age = $_GET['age'];
 
-       echo($name);
-
-
-?>
 </body>
 </html>
