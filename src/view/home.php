@@ -12,7 +12,7 @@
       <a class="nav-link active" href="#">ቤት</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="forms.html">ለመጫን</a>
+      <a class="nav-link" href="forms.php">ለመጫን</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
