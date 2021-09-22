@@ -1,3 +1,8 @@
+<?php 
+require_once('form_store.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="eng">
 <head>
@@ -20,12 +25,14 @@
     <li class="nav-item">
       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
     </li>
-    <li class="nav-item">
-        <input class="form-control" type="search" placeholder="ፈልግ" aria-label="Search">
-    </li>
-    <li class="nav-item">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ፈልግ</button>
-    </li>
+    <!-- <form action=""> -->
+    <li class="nav nav-item">
+      <input class="form-control" type="search" placeholder="ፈልግ" aria-label="Search">
+      </li>
+      <li class="nav-item">
+      <button style="display: inline-block;" class="btn btn-outline-success my-2 my-sm-0" type="submit">ፈልግ</button>   
+      </li>
+    <!-- </form> -->
   </ul>
 
     <div class="row">
@@ -69,10 +76,10 @@
               </thead>
               <tbody>
                   <tr>
-                    <td>001</td>
-                    <td>Amir</td>
-                    <td>gomdar</td>
-                    <td>programmer</td>
+                    <td><?php echo $id; ?></td>
+                    <td><?php echo $name; ?></td>
+                    <td><?php echo $phone; ?></td>
+                    <td><?php echo $bezat; ?></td>
                   </tr>
                   <tr>
                     <td>002</td>
