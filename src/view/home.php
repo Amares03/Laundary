@@ -1,7 +1,3 @@
-<?php 
-require_once('form_store.php');
-?>
-
 
 <!DOCTYPE html>
 <html lang="eng">
@@ -12,97 +8,28 @@ require_once('form_store.php');
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">ቤት</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="forms.php">ለመጫን</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-    <!-- <form action=""> -->
-    <li class="nav nav-item">
-      <input class="form-control" type="search" placeholder="ፈልግ" aria-label="Search">
-      </li>
-      <li class="nav-item">
-      <button style="display: inline-block;" class="btn btn-outline-success my-2 my-sm-0" type="submit">ፈልግ</button>   
-      </li>
-    <!-- </form> -->
-  </ul>
-
+    <?php include_once('header1.php'); ?>
     <div class="row">
-    <div class="col-sm-6">
-    <h1>title one</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Minima sapiente ipsum provident quos itaque possimus eaque ipsa ut
-         voluptas! Dicta consectetur 
-        molestias repellat incidunt sunt ex eaque sed tenetur minus.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nisi cumque.
-           Ipsa ullam libero, neque eveniet rem dicta soluta consectetur maiores commodi voluptates amet, 
-          explicabo illum labore tempora? Error, sequi.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis 
-        explicabo temporibus quas reprehenderit possimus ut totam repudiandae commodi ratione quia dolore,
-         doloremque culpa ad adipisci atque error corporis quasi provident animi exercitationem incidunt 
-         architecto! Repellat est velit, ratione eos deleniti corporis accusantium eaque aut error, 
-         eveniet eius praesentium commodi fugiat necessitatibus assumenda, mollitia reprehenderit ea architecto 
-         doloribus exercitationem. Vel unde mollitia consequuntur soluta distinctio voluptatum nobis repudiandae, 
-         enim asperiores ex quidem dolor. Id iure aspernatur molestias saepe hic adipisci! Iste ipsa ea maiores ab, 
-         saepe porro impedit unde,
-         nam et fugiat laborum aspernatur reprehenderit aliquid velit, deleniti soluta. Reiciendis. </p>
-    <h1>title two</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, hic? Distinctio magnam 
-        commodi aliquam quibusdam, dolorum architecto officiis, deserunt pariatur ipsam necessitatibus 
-        quod unde nesciunt fugit laudantium! Eveniet, sapiente fuga enim rerum ea culpa quo aspernatur quas suscipit
-         iste? Autem reprehenderit veritatis corrupti facere eveniet id placeat adipisci eius 
-         similique aspernatur, quisquam quasi quo consectetur molestiae, sed aliquid repellendus nobis odit ex. 
-         Consequuntur, quis ad delectus quibusdam distinctio eos exercitationem perspiciatis at voluptatum tempore
-          asperiores qui, laborum ab officiis? Quia velit fuga neque! Voluptas atque sequi iste? Ea esse perferendis 
-          voluptatum laboriosam nesciunt fugit, quibusdam amet delectus atque quaerat temporibus!</p>
-          </div>
-          <div class="col-md-6">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">ተራ ቁጥር</th>
-                  <th scope="col">ስም</th>
-                  <th scope="col">ስልክ ቁጥር</th>
-                  <th scope="col">ብዛት</th>
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td><?php echo $id; ?></td>
-                    <td><?php echo $name; ?></td>
-                    <td><?php echo $phone; ?></td>
-                    <td><?php echo $bezat; ?></td>
-                  </tr>
-                  <tr>
-                    <td>002</td>
-                    <td>Amir</td>
-                    <td>gomdar</td>
-                    <td>programmer</td>
-                  </tr>
-                  <tr>
-                    <td>003</td>
-                    <td>Amir</td>
-                    <td>gomdar</td>
-                    <td>programmer</td>
-                  </tr>
-                  <tr>
-                    <td>004</td>
-                    <td>Amir</td>
-                    <td>gomdar</td>
-                    <td>programmer</td>
-                  </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <div class="form-group col-md-4">
+    <?php include_once('form.php'); ?>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-md-4">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, omnis dolor voluptas recusandae iusto sit placeat nemo ex fugiat ab ipsa harum? Quae ullam voluptatem fuga dolorum totam odio ex?
+            A quasi nihil exercitationem accusamus magnam, at illo ipsum error eligendi architecto provident necessitatibus voluptatum fugiat delectus. Cupiditate, vitae consequatur reiciendis aspernatur accusamus eum vel officia officiis at porro explicabo.
+            Magnam, repellendus. Repellat accusamus unde vero eius! Aspernatur perferendis quibusdam assumenda blanditiis delectus, veniam maxime nulla. Laborum fugit reiciendis beatae, similique harum minus ducimus quas hic porro minima ea fugiat!
+            Est ea vero consequatur aperiam vitae. Ipsam dignissimos hic animi similique quia omnis libero rem ipsa, consequatur voluptates nostrum tenetur cupiditate voluptas neque vitae illo impedit tempore suscipit aperiam accusamus!
+            Totam ex, ad eius omnis quibusdam eveniet modi. Incidunt a quibusdam, cumque et sit porro unde animi enim! Voluptate blanditiis dolorum quos culpa. Impedit ullam ipsam sequi sint odio officia?
+            Earum, repellendus harum commodi explicabo veniam facilis quaerat cumque, tempore odit unde dolores beatae sed iure magnam cum voluptas debitis suscipit neque pariatur rerum amet libero assumenda at. Pariatur, maiores.
+            Ducimus consequatur similique, fugit aut atque autem numquam dolor itaque! Ipsa consequuntur veniam libero, harum ipsam porro illum dolorum nesciunt rem deserunt saepe voluptates quae eius? Eius doloremque sequi nostrum.
+            Explicabo iusto, qui commodi laborum aut ipsa saepe ullam dignissimos laudantium magnam officiis facilis quis modi numquam cumque velit dolorum quos reiciendis tenetur ratione illum iste. Error inventore totam id?
+            Earum necessitatibus odio dolores nam asperiores omnis consectetur unde praesentium officia ipsa ratione, nulla ex fugit hic adipisci possimus molestias quia eveniet est expedita suscipit minima! Beatae placeat voluptates expedita.
+            Earum itaque obcaecati, hic temporibus repellat esse illum facere? Id rerum perferendis cupiditate blanditiis, natus laudantium unde nemo provident adipisci, quisquam consectetur porro deleniti ducimus eveniet itaque! Tempora, amet iure.</p>        
+    </div>
+    </div>
+ 
+
 
     <script src="js/bootstrap.js"></script>
 </body>

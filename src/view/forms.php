@@ -13,27 +13,7 @@
         <title>መጫን</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
-    <body>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link " href="home.php">ቤት</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">ለመጫን</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-            <li class="nav-item">
-                <input class="form-control" type="search" placeholder="ፈልግ" aria-label="Search">
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ፈልግ</button>
-            </li>
-          </ul>
+    <?php include('header1.php'); ?>
         <h1 class="h1">customer form <br> </h1>
         <form action="form_store.php" method="POST">
         <div class="row">
