@@ -16,6 +16,11 @@
 
       <label for="bezat">ብዛት</label>
       <input type="number" class="form-control" id="bezat" placeholder="ብዛት">
+
+     
+        <label class="form-check-label" for="nech">ነጭ</label>
+        <input type="checkbox" class="form-check-input" id="nech">
+     
         <div class="container my-3">
             <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
         </div>
