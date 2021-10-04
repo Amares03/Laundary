@@ -1,3 +1,15 @@
+<?php 
+
+$persons = [];
+if(file_exists('data.json')){
+  $data = file_get_contents('data.json');
+  $dataArray = json_decode('data.json');
+}
+
+?>
+
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,35 +22,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>0918775230</td>
-      <td>ሱፍ</td>
-      <td>5</td>
-      <td>
+    <?php foreach($persons as $name => $person): ?>
+      <tr>
+        <th scope="row">1</th>
+        <td><?php echo $name ?></td>
+        <td><?php echo $name['phone'] ?></td>
+        <td><?php echo $name['type'] ?></td>
+        <td><?php echo $name['bezat'] ?></td>
+        <td>
         <button type="button" class="btn btn-outline-danger">delete</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark</td>
-      <td>0918775230</td>
-      <td>ሱፍ</td>
-      <td>5</td>
-      <td>
-         <button type="button" class="btn btn-outline-danger">delete</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>0918775230</td>
-      <td>ሱፍ</td>
-      <td>5</td>
-      <td>
-        <button type="button" class="btn btn-outline-danger">delete</button>
-      </td>
-    </tr>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+      
   </tbody>
 </table>

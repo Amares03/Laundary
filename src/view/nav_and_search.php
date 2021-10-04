@@ -1,3 +1,13 @@
+<?php 
+$keyword = '';
+if(isset($_POST['keyword'])){
+    $keyword = $_POST['keyword'];
+    
+}
+
+?>
+
+
 
 <nav class="navbar navbar-expand-sm bg-light navbar-light text-primary" >
   <!-- Navbar content -->
@@ -27,11 +37,15 @@
   </div>
   </div>
 </nav>
+<form action="<?php ?>" method="post">
 <section class="bg-light text-primary p-3">
     <div class="input-group search-input">
-        <input type="text" class="form-control" placeholder="search" >
-        <div class="input-group-append">
-            <button class="btn btn-primary btn-lg" type="button" id="button-addon2">Search</button>
-        </div>
+        
+            <input type="text" class="form-control" name="keyword" placeholder="search" value="<?php echo $keyword; ?>" >
+            <div class="input-group-append">
+                <button class="btn btn-primary btn-lg" type="submit" id="button-addon2">Search</button>
+            </div>
+        
     </div>
 </section>
+</form>
