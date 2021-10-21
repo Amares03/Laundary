@@ -1,10 +1,15 @@
 <?php 
+  include 'includes/dbh.inc.php';
+  include 'includes/user.inc.php';
+  include 'includes/viewUser.inc.php';
 
-$persons = [];
-if(file_exists('data.json')){
-  $data = file_get_contents('data.json');
-  $dataArray = json_decode('data.json');
-}
+
+
+$person = new User();
+
+$datas = $person->getAllUsers();
+
+
 
 ?>
 
@@ -22,13 +27,13 @@ if(file_exists('data.json')){
     </tr>
   </thead>
   <tbody>
-    <?php foreach($persons as $name => $person): ?>
+    <?php foreach($datas as $data ): ?>
       <tr>
-        <th scope="row">1</th>
-        <td><?php echo $name ?></td>
-        <td><?php echo $name['phone'] ?></td>
-        <td><?php echo $name['type'] ?></td>
-        <td><?php echo $name['bezat'] ?></td>
+        <th scope="row"><?php echo $data['id']; ?></th>
+        <td><?php echo $data['name']; ?></td>
+        <td><?php echo $data['phone']; ?></td>
+        <td><?php echo $data['aynet']; ?></td>
+        <td><?php echo $data['bzat']; ?></td>
         <td>
         <button type="button" class="btn btn-outline-danger">delete</button>
         </td>

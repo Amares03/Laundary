@@ -1,37 +1,6 @@
-<?php
-        $name = '';
-        $phone = '';
-        $type = '';
-        $bezat = '';
-        $nech = false;
-        
 
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
-          $name = $_POST['name'];
-          $phone = $_POST['phone'];
-          $type = $_POST['type'];
-          $bezat = $_POST['bezat'];
-          if(isset($_POST['nech'])){
-            $nech = true;
-          }
-            if(file_exists('data.json')){
-              $data = file_get_contents('data.json');
-              $dataArray = json_decode('data.json', true);
-            }else{
-              $dataArray = [];
-            }
-            $dataArray[$name] = [
-              'phone' => $phone, 
-              'type' => $type, 
-              'bezat' => $bezat,
-              'nech' => $nech
-            ];
-            file_put_contents('data.json', json_encode($dataArray, JSON_PRETTY_PRINT));    
-      }
-      
-?>
 
-<form action="<?php ?>" method="post">
+<form action="includes/dba.inc.php" method="POST">
     <label for="name">ስም</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="ስም" required>
 
