@@ -1,7 +1,7 @@
 <?php 
-  include 'includes/dbh.inc.php';
-  include 'includes/user.inc.php';
-  include 'includes/viewUser.inc.php';
+  include_once 'includes/dbh.inc.php';
+  include_once 'includes/user.inc.php';
+  include_once 'includes/viewUser.inc.php';
 
 
 
