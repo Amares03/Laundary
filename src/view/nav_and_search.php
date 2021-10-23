@@ -4,14 +4,12 @@
         include_once 'includes/viewUser.inc.php';
         include_once 'includes/dbas.inc.php';
 
-        $keyword = '';
-        $datas[]='';
-
+        $key = '';
         if(isset($_POST['search'])){
-            $keyword = $_POST['keyword'];
-            $persons = new Search();      
-            $datass = $persons->searchUsers($keyword);
-        }
+        $key = $_POST['keyword'];
+      }
+
+        
         
 
       
@@ -48,31 +46,40 @@
 <form action="<?php ?>" method="post">
 <section class="bg-light text-primary p-3">
     <div class="input-group search-input">
-            <input type="text" class="form-control" name="keyword" placeholder="search" value="<?php echo $keyword; ?>" >
+            <input type="text" class="form-control" name="keyword" placeholder="search" value="<?php echo $key; ?>" >
             <div class="input-group-append">
                 <button class="btn btn-primary btn-lg" type="submit" id="button-addon2" name= "search" >Search</button>
             </div>
     </div>
+    <?php
+      if(isset($_POST['search']) && $key != ''){ 
+        $keyword = $_POST['keyword'];
+        $persons = new Search();      
+        $datas = $persons->searchUsers($keyword);
+    
+     ?>
     <div class="input-group" name="searchResult">
-    <table class="table table-striped">
-  <tbody>
-      <?php if(isset($datass)): ?>
-    <?php foreach($datass as $data ): ?>
-      <tr>
-        <th scope="row"><?php echo $data['id']; ?></th>
-        <td><?php echo $data['name']; ?></td>
-        <td><?php echo $data['phone']; ?></td>
-        <td><?php echo $data['aynet']; ?></td>
-        <td><?php echo $data['bzat']; ?></td>
-        <td>
-        <button type="button" class="btn btn-outline-danger">delete</button>
-        </td>
-      </tr>
+        <?php if($datas != "not found"): ?>
+    <?php foreach($datas as $data ): ?>
+
+      <table class="table table-striped">
+         <tbody>
+              <tr>
+                    <th scope="row"><?php echo $data['id']; ?></th>
+                    <td><?php echo $data['name']; ?></td>
+                    <td><?php echo $data['phone']; ?></td>
+                    <td><?php echo $data['aynet']; ?></td>
+                    <td><?php echo $data['bzat']; ?></td>
+                    <td>
+                    <button type="button" class="btn btn-outline-danger">delete</button>
+                    </td>
+              </tr>
+        </tbody>
+      </table>
+  
     <?php endforeach; ?>
     <?php endif; ?>
-      
-  </tbody>
-</table>
     </div>
+    <?php }//end of if statement ?>
 </section>
 </form>

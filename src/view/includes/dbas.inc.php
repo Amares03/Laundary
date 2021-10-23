@@ -29,9 +29,9 @@
 
 class Search extends Dbh{
 
-    public function searchUsers(string $key){
+    public function searchUsers($key){
     $conn = $this->connect();
-    $search = mysqli_real_escape_string($conn, $this->key);
+    $search = mysqli_real_escape_string($conn, $key);
     $sql = "SELECT * FROM user_info WHERE id LIKE '%$search%' OR name LIKE '%$search%' OR phone LIKE '%$search%'";
     $result = $this->connect()->query($sql);
     $numRows = $result->num_rows;
@@ -41,8 +41,9 @@ class Search extends Dbh{
         }
         return $data;
     }else{
-        $data[]="not found";
+        $data = "not found";
     }
+    return $data;
 }
 }
 

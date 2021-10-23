@@ -24,6 +24,6 @@
         <input type="checkbox" class="form-check-input" id="nech" name="nech">
      
         <div class="container my-3">
-            <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-lg">ጫን</button>
         </div>      
 </form>
