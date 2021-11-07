@@ -1,31 +1,6 @@
 <?php 
 
-// // include 'dbh.inc.php';
 
-// $keyword = '';
-// // $message = "";
-// // $connect = new Dbh();
-// // $conn = $connect->connect();
-
-// if(isset($_POST['search'])){
-//     $keyword = $_POST['keyword'];
-//     // $search = mysqli_real_escape_string($conn, $keyword);
-//     // $sql = "SELECT * FROM user_info WHERE id LIKE '%$search%' OR name LIKE '%$search%' OR phone LIKE '%$search%'";
-//     // $result = mysqli_query($conn,$sql);
-//     // $queryResult = mysqli_num_rows($result);
-
-//     // if($queryResult > 0){
-//     //     while($row = mysqli_fetch_assoc($result)){
-//     //         $data[] = $row;
-//     //     }
-
-//     // }else{
-//     //     $message = "no search matches!!";
-//     // }
-    
-// }
-
-// // header("Location: ../home.php");
 
 class Search extends Dbh{
 

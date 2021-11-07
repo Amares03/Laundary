@@ -1,20 +1,19 @@
 <?php 
+  require 'vendor/autoload.php';
   include_once 'includes/dbh.inc.php';
   include_once 'includes/user.inc.php';
   include_once 'includes/viewUser.inc.php';
 
-
-
+  use Andegna\Converter\FromJdnConverter;
 $person = new User();
 
 $datas = $person->getAllUsers();
 
-
-
+  
 ?>
 
 
-
+<button type="button" class="btn btn-light" id="btn"><i class="fas fa-plus"></i></button>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,6 +22,7 @@ $datas = $person->getAllUsers();
       <th scope="col">ስልክ ቁጥር</th>
       <th scope="col">የልብስ አይነት</th>
       <th scope="col">ብዛት</th>
+      <th scope="col">የሚመለስበት ቀን</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -34,8 +34,11 @@ $datas = $person->getAllUsers();
         <td><?php echo $data['phone']; ?></td>
         <td><?php echo $data['aynet']; ?></td>
         <td><?php echo $data['bzat']; ?></td>
+        <td><?php echo $data['return_date']; ?></td>
+       
         <td>
-        <button type="button" class="btn btn-outline-danger">delete</button>
+        <button type="button" class="btn btn-light"><i class="fas fa-user-minus"></i>
+</button>
         </td>
       </tr>
     <?php endforeach; ?>
