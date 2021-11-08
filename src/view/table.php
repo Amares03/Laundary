@@ -9,6 +9,12 @@ $person = new User();
 
 $datas = $person->getAllUsers();
 
+// if(isset($_POST['del-btn'])){
+//   $id = $
+//   $delete = $person->deleteUser();
+  
+// }
+
   
 ?>
 
@@ -27,7 +33,9 @@ $datas = $person->getAllUsers();
     </tr>
   </thead>
   <tbody>
-    <?php foreach($datas as $data ): ?>
+      
+    <?php if(!(is_null($datas))){
+     foreach($datas as $data ): ?>
       <tr>
         <th scope="row"><?php echo $data['id']; ?></th>
         <td><?php echo $data['name']; ?></td>
@@ -37,11 +45,14 @@ $datas = $person->getAllUsers();
         <td><?php echo $data['return_date']; ?></td>
        
         <td>
-        <button type="button" class="btn btn-light"><i class="fas fa-user-minus"></i>
-</button>
+          <form action="includes/deleteUser.php" method="post">
+              <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+              <button class="btn btn-light" name="del-btn"><i class="fas fa-user-minus"></i></button>
+          </form>
+        
         </td>
       </tr>
-    <?php endforeach; ?>
+    <?php endforeach; }?>
       
   </tbody>
 </table>

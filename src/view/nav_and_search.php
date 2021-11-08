@@ -64,7 +64,7 @@
     
      ?>
     <div class="input-group" name="searchResult">
-    <?php if($datas != "not found"): ?>
+    <?php if($datas != "not found"){ ?>
           <?php foreach($datas as $data ): ?>
 
             <table class="table table-striped">
@@ -77,14 +77,17 @@
                           <td><?php echo $data['bzat']; ?></td>
                           <td><?php echo date('y-m-d h-m-s',strtotime($data['date'])); ?></td>
                           <td>
-                          <button type="button" class="btn btn-light"><i class="fas fa-user-minus"></i></button>
+                            <form action="includes/deleteUser.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                                <button class="btn btn-light" name="del-btn"><i class="fas fa-user-minus"></i></button>
+                            </form>
                           </td>
                     </tr>
               </tbody>
             </table>
         
           <?php endforeach; ?>
-    <?php endif; ?>
+    <?php } ?>
     </div>
     <?php }//end of if statement ?>
 </section>
